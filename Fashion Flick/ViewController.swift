@@ -31,9 +31,33 @@ class ViewController: UIViewController {
         textView.isEditable = false
         textView.isScrollEnabled = false
         textView.textAlignment = .center
-    
         
         return textView
+    }()
+    
+    private let skipButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Skip", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont(name: "Montserrat-ExtraLight", size: 21)
+        button.setTitleColor(#colorLiteral(red: 0.2117647059, green: 0.1529411765, blue: 0.1725490196, alpha: 1), for: .normal)
+        return button
+    }()
+    
+    private let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Next", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont(name: "Montserrat-ExtraLight", size: 21)
+        button.setTitleColor(#colorLiteral(red: 0.2117647059, green: 0.1529411765, blue: 0.1725490196, alpha: 1), for: .normal)
+        return button
+    }()
+    
+    private let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.currentPage = 0
+        pc.numberOfPages = 3
+        return pc
     }()
 
     override func viewDidLoad() {
@@ -44,7 +68,25 @@ class ViewController: UIViewController {
         
         view.addSubview(descriptionTextView)
         setupLayout()
+        setupBottomControls()
     
+    }
+    
+    fileprivate func setupBottomControls() {
+        let bottomControlStackView = UIStackView(arrangedSubviews: [skipButton, pageControl, nextButton])
+        bottomControlStackView.translatesAutoresizingMaskIntoConstraints = false
+        bottomControlStackView.distribution = .fillEqually
+        
+        view.addSubview(bottomControlStackView)
+        
+        NSLayoutConstraint.activate([
+            bottomControlStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomControlStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            bottomControlStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            bottomControlStackView.heightAnchor.constraint(equalToConstant: 50)
+            
+            ])
+        
     }
     
     
