@@ -20,8 +20,13 @@ class ViewController: UIViewController {
     
     let descriptionTextView: UITextView = {
         let textView = UITextView()
-        let attributedText = NSMutableAttributedString(string: "What is this?", attributes: [NSAttributedString.Key.font: UIFont.fontNames(forFamilyName: "") ])
+
+        let attributedText = NSMutableAttributedString(string: "What is this?", attributes: [NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 40)!, NSAttributedString.Key.foregroundColor: UIColor.white])
         
+        attributedText.append(NSAttributedString(string: "\n\nNot sure what to wear today? Let us help you out! Fashion Flick is here to help you decide and inspire what to wear for the day so you do not have to struggle thinking of an outfit.", attributes: [NSAttributedString.Key.font: UIFont(name: "Montserrat-Light", size: 21)!, NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2117647059, green: 0.1529411765, blue: 0.1725490196, alpha: 1)]))
+        
+        textView.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.8352941176, blue: 0.7411764706, alpha: 1)
+        textView.attributedText = attributedText
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isEditable = false
         textView.isScrollEnabled = false
@@ -35,9 +40,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        view.addSubview(descriptionTextView)
+        view.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.8352941176, blue: 0.7411764706, alpha: 1)
         
+        view.addSubview(descriptionTextView)
         setupLayout()
+    
     }
     
     
@@ -49,17 +56,18 @@ class ViewController: UIViewController {
         topImageContainerView.addSubview(questionImageView)
         
         
+        
         NSLayoutConstraint.activate([
             
-            topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor),
+            topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
             topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
+            topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.47),
             
             
             questionImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor),
             questionImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor),
-            questionImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.6),
+            questionImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.9),
             
             descriptionTextView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor),
             descriptionTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
