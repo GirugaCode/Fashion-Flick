@@ -1,5 +1,5 @@
 //
-//  SwipingController.swift
+//  OnBoardingViewController.swift
 //  Fashion Flick
 //
 //  Created by Ryan Nguyen on 1/9/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class OnBoardingViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     
     let pages = [
@@ -17,7 +17,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         Page(imageName: "DressUpImage", headerText: "Time to Dress Up!", bodyText: "FANTASTIC! You now have an outfit to work with! From here you can either draw inspiration from the fit or you can generate a new one to keep yourself inspired! Now go out and feel confident!")
     ]
     
-    private let prevButton: UIButton = {
+    let prevButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Prev", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -27,16 +27,8 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         return button
     }()
     
-    @objc private func handlePrev() {
-        let nextIndex = max(pageControl.currentPage - 1, 0)
-        
-        let indexPath = IndexPath(item: nextIndex, section: 0)
-        pageControl.currentPage = nextIndex
-        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-
     
-    private let nextButton: UIButton = {
+    let nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Next", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -45,15 +37,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         button.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
         return button
     }()
-    
-    @objc private func handleNext() {
-        let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
-        
-        let indexPath = IndexPath(item: nextIndex, section: 0)
-        pageControl.currentPage = nextIndex
-        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        
-    }
+
     
     lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
@@ -78,16 +62,44 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
             bottomControlStackView.heightAnchor.constraint(equalToConstant: 50)
             
             ])
+    }
+    
+    @objc private func handleNext() {
+        let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
         
+        let indexPath = IndexPath(item: nextIndex, section: 0)
+        pageControl.currentPage = nextIndex
+        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        doneWithOnboarding()
+    }
+    
+    @objc private func handlePrev() {
+        let nextIndex = max(pageControl.currentPage - 1, 0)
+        
+        let indexPath = IndexPath(item: nextIndex, section: 0)
+        pageControl.currentPage = nextIndex
+        collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
+    @objc private func handleDone(_ sender: UIButton) {
+        AppDelegate.shared.showHome()
     }
     
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
         let pageIndicator = targetContentOffset.pointee.x
         pageControl.currentPage = Int(pageIndicator / view.frame.width)
+        doneWithOnboarding()
+    }
+    
+    func doneWithOnboarding () {
+        if pageControl.currentPage == 2 {
+            nextButton.setTitle("Done", for: .normal)
+            nextButton.addTarget(self, action: #selector(handleDone), for: .touchUpInside)
+        }
     }
 
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

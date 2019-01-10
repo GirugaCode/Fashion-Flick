@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension SwipingController {
+extension OnBoardingViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: { (_) in

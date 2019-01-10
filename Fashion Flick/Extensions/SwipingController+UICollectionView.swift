@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension SwipingController {
+extension OnBoardingViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pages.count
