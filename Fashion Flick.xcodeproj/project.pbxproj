@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2892317121E5A521008552A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892317021E5A521008552A3 /* AppDelegate.swift */; };
-		2892317321E5A521008552A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892317221E5A521008552A3 /* ViewController.swift */; };
 		2892317621E5A521008552A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2892317421E5A521008552A3 /* Main.storyboard */; };
 		2892317821E5A522008552A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2892317721E5A522008552A3 /* Assets.xcassets */; };
 		2892317B21E5A522008552A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2892317921E5A522008552A3 /* LaunchScreen.storyboard */; };
@@ -33,12 +32,13 @@
 		289231AA21E6A491008552A3 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231A921E6A491008552A3 /* SwipingController.swift */; };
 		289231AC21E6BA9B008552A3 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AB21E6BA9B008552A3 /* PageCell.swift */; };
 		289231AE21E6E603008552A3 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AD21E6E603008552A3 /* Page.swift */; };
+		289231B021E72F76008552A3 /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AF21E72F76008552A3 /* SwipingController+extension.swift */; };
+		289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2892316D21E5A521008552A3 /* Fashion Flick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fashion Flick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2892317021E5A521008552A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2892317221E5A521008552A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2892317521E5A521008552A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2892317721E5A522008552A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2892317A21E5A522008552A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		289231A921E6A491008552A3 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		289231AB21E6BA9B008552A3 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		289231AD21E6E603008552A3 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		289231AF21E72F76008552A3 /* SwipingController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
+		289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +98,13 @@
 		2892316F21E5A521008552A3 /* Fashion Flick */ = {
 			isa = PBXGroup;
 			children = (
+				289231B621E730F1008552A3 /* Extensions */,
+				289231B521E73090008552A3 /* Model */,
+				289231B421E7308D008552A3 /* View */,
+				289231B321E7308A008552A3 /* Controller */,
 				2892317021E5A521008552A3 /* AppDelegate.swift */,
-				289231A921E6A491008552A3 /* SwipingController.swift */,
-				289231AB21E6BA9B008552A3 /* PageCell.swift */,
-				289231AD21E6E603008552A3 /* Page.swift */,
-				2892317221E5A521008552A3 /* ViewController.swift */,
-				2892317421E5A521008552A3 /* Main.storyboard */,
 				2892317721E5A522008552A3 /* Assets.xcassets */,
+				2892317421E5A521008552A3 /* Main.storyboard */,
 				2892317921E5A522008552A3 /* LaunchScreen.storyboard */,
 				2892317C21E5A522008552A3 /* Info.plist */,
 				2892318421E66C32008552A3 /* Resources */,
@@ -133,6 +135,39 @@
 				2892318F21E66CCF008552A3 /* Montserrat-ThinItalic.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		289231B321E7308A008552A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				289231A921E6A491008552A3 /* SwipingController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		289231B421E7308D008552A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				289231AB21E6BA9B008552A3 /* PageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		289231B521E73090008552A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				289231AD21E6E603008552A3 /* Page.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		289231B621E730F1008552A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				289231AF21E72F76008552A3 /* SwipingController+extension.swift */,
+				289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,11 +259,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2892317321E5A521008552A3 /* ViewController.swift in Sources */,
 				2892317121E5A521008552A3 /* AppDelegate.swift in Sources */,
 				289231AC21E6BA9B008552A3 /* PageCell.swift in Sources */,
+				289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */,
 				289231AA21E6A491008552A3 /* SwipingController.swift in Sources */,
 				289231AE21E6E603008552A3 /* Page.swift in Sources */,
+				289231B021E72F76008552A3 /* SwipingController+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
