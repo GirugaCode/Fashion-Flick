@@ -32,6 +32,7 @@
 		289231A821E66CD0008552A3 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2892319621E66CCF008552A3 /* Montserrat-Regular.ttf */; };
 		289231AA21E6A491008552A3 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231A921E6A491008552A3 /* SwipingController.swift */; };
 		289231AC21E6BA9B008552A3 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AB21E6BA9B008552A3 /* PageCell.swift */; };
+		289231AE21E6E603008552A3 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AD21E6E603008552A3 /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		2892319621E66CCF008552A3 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		289231A921E6A491008552A3 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		289231AB21E6BA9B008552A3 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		289231AD21E6E603008552A3 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				2892317021E5A521008552A3 /* AppDelegate.swift */,
 				289231A921E6A491008552A3 /* SwipingController.swift */,
 				289231AB21E6BA9B008552A3 /* PageCell.swift */,
+				289231AD21E6E603008552A3 /* Page.swift */,
 				2892317221E5A521008552A3 /* ViewController.swift */,
 				2892317421E5A521008552A3 /* Main.storyboard */,
 				2892317721E5A522008552A3 /* Assets.xcassets */,
@@ -225,6 +228,7 @@
 				2892317121E5A521008552A3 /* AppDelegate.swift in Sources */,
 				289231AC21E6BA9B008552A3 /* PageCell.swift in Sources */,
 				289231AA21E6A491008552A3 /* SwipingController.swift in Sources */,
+				289231AE21E6E603008552A3 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

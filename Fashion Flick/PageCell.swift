@@ -10,14 +10,29 @@ import UIKit
 
 class PageCell: UICollectionViewCell {
     
-    let questionImageView: UIImageView = {
+    var page: Page? {
+        didSet{
+            guard let unwrappedPage = page else { return }
+            questionImageView.image = UIImage(named: unwrappedPage.imageName)
+            
+            let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText, attributes: [NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 35)!, NSAttributedString.Key.foregroundColor: UIColor.white])
+            
+            attributedText.append(NSAttributedString(string: "\n\n\(unwrappedPage.bodyText)", attributes: [NSAttributedString.Key.font: UIFont(name: "Montserrat-Light", size: 20)!, NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.2117647059, green: 0.1529411765, blue: 0.1725490196, alpha: 1)]))
+            
+            descriptionTextView.attributedText = attributedText
+            descriptionTextView.textAlignment = .center
+
+        }
+    }
+    
+    private let questionImageView: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "QuestionImage"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    let descriptionTextView: UITextView = {
+    private let descriptionTextView: UITextView = {
         let textView = UITextView()
         
         let attributedText = NSMutableAttributedString(string: "What is this?", attributes: [NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 40)!, NSAttributedString.Key.foregroundColor: UIColor.white])
