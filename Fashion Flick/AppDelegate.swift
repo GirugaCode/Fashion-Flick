@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if isCurrentUser {
             showHome()
+            
         } else {
             UserDefaults.standard.set(false, forKey: "current_user")
             showOnBoarding()
