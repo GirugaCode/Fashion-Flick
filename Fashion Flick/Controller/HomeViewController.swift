@@ -17,6 +17,16 @@ class HomeViewController: UIViewController {
         return imageView
     }()
     
+    private let dressMeUpButton : UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Dress Me Up!", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont(name: "Montserrat-Regular", size: 21)
+        button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.8352941176, blue: 0.7411764706, alpha: 1)
+        return button
+    }()
+    
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         super.viewDidLoad()
@@ -36,7 +46,7 @@ class HomeViewController: UIViewController {
         
         topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
         topImageContainerView.addSubview(weatherImageView)
-        
+        view.addSubview(dressMeUpButton)
         
         NSLayoutConstraint.activate([
             
@@ -47,7 +57,13 @@ class HomeViewController: UIViewController {
             
             weatherImageView.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor),
             weatherImageView.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor),
-            weatherImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.7)
+            weatherImageView.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.7),
+            
+            
+            dressMeUpButton.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor, constant: 170),
+            dressMeUpButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
+            dressMeUpButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
+            dressMeUpButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
             
             ])
         
