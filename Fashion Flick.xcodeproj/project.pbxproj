@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CEE1F21E84F730086911D /* StyleChoiceViewController.swift */; };
 		2892317121E5A521008552A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892317021E5A521008552A3 /* AppDelegate.swift */; };
 		2892317621E5A521008552A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2892317421E5A521008552A3 /* Main.storyboard */; };
 		2892317821E5A522008552A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2892317721E5A522008552A3 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		280CEE1F21E84F730086911D /* StyleChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleChoiceViewController.swift; sourceTree = "<group>"; };
 		2892316D21E5A521008552A3 /* Fashion Flick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fashion Flick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2892317021E5A521008552A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2892317521E5A521008552A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				289231A921E6A491008552A3 /* OnBoardingViewController.swift */,
 				289231B721E7438D008552A3 /* HomeViewController.swift */,
+				280CEE1F21E84F730086911D /* StyleChoiceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */,
 				289231AA21E6A491008552A3 /* OnBoardingViewController.swift in Sources */,
 				289231AE21E6E603008552A3 /* Page.swift in Sources */,
+				280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */,
 				289231B821E7438D008552A3 /* HomeViewController.swift in Sources */,
 				289231B021E72F76008552A3 /* SwipingController+extension.swift in Sources */,
 			);

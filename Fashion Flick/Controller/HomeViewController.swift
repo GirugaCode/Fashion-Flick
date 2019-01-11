@@ -25,8 +25,14 @@ class HomeViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.8352941176, blue: 0.7411764706, alpha: 1)
+        button.addTarget(self, action: #selector(segueToStyleChoice), for: .touchUpInside)
         return button
     }()
+    
+    @objc private func segueToStyleChoice() {
+        let styleViewController = StyleChoiceViewController()
+        self.navigationController?.pushViewController(styleViewController, animated: true)
+    }
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
