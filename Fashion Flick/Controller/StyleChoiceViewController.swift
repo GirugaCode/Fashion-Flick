@@ -35,6 +35,7 @@ class StyleChoiceViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
+        button.addTarget(self, action: #selector(segueToGenderChoice), for: .touchUpInside)
         return button
     }()
     
@@ -46,9 +47,14 @@ class StyleChoiceViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
+        button.addTarget(self, action: #selector(segueToGenderChoice), for: .touchUpInside)
         return button
     } ()
     
+    @objc private func segueToGenderChoice() {
+        let modelViewController = ModelChoiceViewController()
+        self.navigationController?.pushViewController(modelViewController, animated: true)
+    }
     
 
     override func viewDidLoad() {

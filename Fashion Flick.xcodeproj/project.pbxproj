@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CEE1F21E84F730086911D /* StyleChoiceViewController.swift */; };
+		280CEE2421E86E4D0086911D /* ModelChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CEE2321E86E4D0086911D /* ModelChoiceViewController.swift */; };
+		280CEE2621E936BD0086911D /* MaleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CEE2521E936BD0086911D /* MaleModelViewController.swift */; };
+		280CEE2821E936CE0086911D /* FemaleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280CEE2721E936CE0086911D /* FemaleModelViewController.swift */; };
 		2892317121E5A521008552A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892317021E5A521008552A3 /* AppDelegate.swift */; };
 		2892317621E5A521008552A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2892317421E5A521008552A3 /* Main.storyboard */; };
 		2892317821E5A522008552A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2892317721E5A522008552A3 /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		280CEE1F21E84F730086911D /* StyleChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleChoiceViewController.swift; sourceTree = "<group>"; };
+		280CEE2321E86E4D0086911D /* ModelChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelChoiceViewController.swift; sourceTree = "<group>"; };
+		280CEE2521E936BD0086911D /* MaleModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleModelViewController.swift; sourceTree = "<group>"; };
+		280CEE2721E936CE0086911D /* FemaleModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleModelViewController.swift; sourceTree = "<group>"; };
 		2892316D21E5A521008552A3 /* Fashion Flick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fashion Flick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2892317021E5A521008552A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2892317521E5A521008552A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +153,9 @@
 				289231A921E6A491008552A3 /* OnBoardingViewController.swift */,
 				289231B721E7438D008552A3 /* HomeViewController.swift */,
 				280CEE1F21E84F730086911D /* StyleChoiceViewController.swift */,
+				280CEE2321E86E4D0086911D /* ModelChoiceViewController.swift */,
+				280CEE2521E936BD0086911D /* MaleModelViewController.swift */,
+				280CEE2721E936CE0086911D /* FemaleModelViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,8 +276,11 @@
 			files = (
 				2892317121E5A521008552A3 /* AppDelegate.swift in Sources */,
 				289231AC21E6BA9B008552A3 /* OnBoardingCell.swift in Sources */,
+				280CEE2421E86E4D0086911D /* ModelChoiceViewController.swift in Sources */,
+				280CEE2821E936CE0086911D /* FemaleModelViewController.swift in Sources */,
 				289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */,
 				289231AA21E6A491008552A3 /* OnBoardingViewController.swift in Sources */,
+				280CEE2621E936BD0086911D /* MaleModelViewController.swift in Sources */,
 				289231AE21E6E603008552A3 /* OnBoardingPage.swift in Sources */,
 				280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */,
 				289231B821E7438D008552A3 /* HomeViewController.swift in Sources */,
