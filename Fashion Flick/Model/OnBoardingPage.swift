@@ -1,5 +1,5 @@
 //
-//  Page.swift
+//  onBoardingPage.swift
 //  Fashion Flick
 //
 //  Created by Ryan Nguyen on 1/9/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Page {
+struct OnBoardingPage {
     let imageName: String
     let headerText: String
     let bodyText: String

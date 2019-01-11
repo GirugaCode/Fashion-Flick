@@ -31,8 +31,8 @@
 		289231A721E66CD0008552A3 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2892319521E66CCF008552A3 /* Montserrat-ExtraBold.ttf */; };
 		289231A821E66CD0008552A3 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2892319621E66CCF008552A3 /* Montserrat-Regular.ttf */; };
 		289231AA21E6A491008552A3 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231A921E6A491008552A3 /* OnBoardingViewController.swift */; };
-		289231AC21E6BA9B008552A3 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AB21E6BA9B008552A3 /* PageCell.swift */; };
-		289231AE21E6E603008552A3 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AD21E6E603008552A3 /* Page.swift */; };
+		289231AC21E6BA9B008552A3 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AB21E6BA9B008552A3 /* OnBoardingCell.swift */; };
+		289231AE21E6E603008552A3 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AD21E6E603008552A3 /* OnBoardingPage.swift */; };
 		289231B021E72F76008552A3 /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AF21E72F76008552A3 /* SwipingController+extension.swift */; };
 		289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */; };
 		289231B821E7438D008552A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231B721E7438D008552A3 /* HomeViewController.swift */; };
@@ -65,8 +65,8 @@
 		2892319521E66CCF008552A3 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		2892319621E66CCF008552A3 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		289231A921E6A491008552A3 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		289231AB21E6BA9B008552A3 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
-		289231AD21E6E603008552A3 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		289231AB21E6BA9B008552A3 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
+		289231AD21E6E603008552A3 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		289231AF21E72F76008552A3 /* SwipingController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
 		289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 		289231B721E7438D008552A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		289231B421E7308D008552A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				289231AB21E6BA9B008552A3 /* PageCell.swift */,
+				289231AB21E6BA9B008552A3 /* OnBoardingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 		289231B521E73090008552A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				289231AD21E6E603008552A3 /* Page.swift */,
+				289231AD21E6E603008552A3 /* OnBoardingPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,10 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2892317121E5A521008552A3 /* AppDelegate.swift in Sources */,
-				289231AC21E6BA9B008552A3 /* PageCell.swift in Sources */,
+				289231AC21E6BA9B008552A3 /* OnBoardingCell.swift in Sources */,
 				289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */,
 				289231AA21E6A491008552A3 /* OnBoardingViewController.swift in Sources */,
-				289231AE21E6E603008552A3 /* Page.swift in Sources */,
+				289231AE21E6E603008552A3 /* OnBoardingPage.swift in Sources */,
 				280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */,
 				289231B821E7438D008552A3 /* HomeViewController.swift in Sources */,
 				289231B021E72F76008552A3 /* SwipingController+extension.swift in Sources */,

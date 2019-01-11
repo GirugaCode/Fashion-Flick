@@ -41,8 +41,7 @@ class HomeViewController: UIViewController {
         setupLayout()
         navigationUI()
         
-        
-        
+        // Checks if user already did on-boarding
         UserDefaults.standard.set(true, forKey: "current_user")
 
     }

@@ -1,5 +1,5 @@
 //
-//  PageCell.swift
+//  OnBoardingCell.swift
 //  Fashion Flick
 //
 //  Created by Ryan Nguyen on 1/9/19.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PageCell: UICollectionViewCell {
+class OnBoardingCell: UICollectionViewCell {
     
-    var page: Page? {
+    var page: OnBoardingPage? {
         didSet{
             guard let unwrappedPage = page else { return }
             questionImageView.image = UIImage(named: unwrappedPage.imageName)
