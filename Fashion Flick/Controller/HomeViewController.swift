@@ -21,7 +21,8 @@ class HomeViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Dress Me Up!", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = UIFont(name: "Montserrat-Regular", size: 21)
+        button.titleLabel?.font = UIFont(name: "Montserrat-Regular", size: 35)
+        button.layer.cornerRadius = 10
         button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.9058823529, green: 0.8352941176, blue: 0.7411764706, alpha: 1)
         return button
@@ -32,12 +33,19 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupLayout()
+        navigationUI()
         
-        view.backgroundColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
+        
         
         UserDefaults.standard.set(true, forKey: "current_user")
 
+    }
+    
+    private func navigationUI() {
+        view.backgroundColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
+        navigationItem.title = "Fashion Flick"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Thin", size: 35)!, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     private func setupLayout() {
