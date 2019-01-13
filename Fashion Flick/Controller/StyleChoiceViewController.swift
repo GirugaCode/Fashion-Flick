@@ -27,7 +27,7 @@ class StyleChoiceViewController: UIViewController {
         return imageView
     }()
     
-    private let professionalButton : UIButton = {
+    private let professionalButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Professional", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
