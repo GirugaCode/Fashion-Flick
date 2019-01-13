@@ -35,7 +35,7 @@ class StyleChoiceViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
-        button.addTarget(self, action: #selector(segueToGenderChoice), for: .touchUpInside)
+        button.addTarget(self, action: #selector(pushToProfessionalChoice), for: .touchUpInside)
         return button
     }()
     
@@ -47,12 +47,19 @@ class StyleChoiceViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.7921568627, green: 0.6, blue: 0.5764705882, alpha: 1)
-        button.addTarget(self, action: #selector(segueToGenderChoice), for: .touchUpInside)
+        button.addTarget(self, action: #selector(pushToCasualChoice), for: .touchUpInside)
         return button
     } ()
     
-    @objc private func segueToGenderChoice() {
+    @objc private func pushToProfessionalChoice(sender: UIButton) {
         let modelViewController = ModelChoiceViewController()
+        modelViewController.professional = "Professional"
+        self.navigationController?.pushViewController(modelViewController, animated: true)
+    }
+    
+    @objc private func pushToCasualChoice(sender: UIButton) {
+        let modelViewController = ModelChoiceViewController()
+        modelViewController.professional = "Casual"
         self.navigationController?.pushViewController(modelViewController, animated: true)
     }
     

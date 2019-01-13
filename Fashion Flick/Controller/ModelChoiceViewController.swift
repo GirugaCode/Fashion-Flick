@@ -10,6 +10,9 @@ import UIKit
 
 class ModelChoiceViewController: UIViewController {
     
+    var professional: String = ""
+    var casual: String = ""
+    
     let maleModelChoice: UIButton = {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -27,14 +30,18 @@ class ModelChoiceViewController: UIViewController {
     } ()
     
     @objc func moveToMaleModel() {
-        let maleModelViewController = MaleModelViewController()
-        self.navigationController?.pushViewController(maleModelViewController, animated: true)
+        let modelViewController = ModelViewController()
+        modelViewController.male = "Male"
+        self.navigationController?.pushViewController(modelViewController, animated: true)
     }
     
     @objc func moveToFemaleModel() {
-        let femaleModelViewController = FemaleModelViewController()
-        self.navigationController?.pushViewController(femaleModelViewController, animated: true)
+        let modelViewController = ModelViewController()
+        modelViewController.female = "Female"
+        self.navigationController?.pushViewController(modelViewController, animated: true)
     }
+
+
     
     
 
@@ -43,6 +50,8 @@ class ModelChoiceViewController: UIViewController {
         
         navigationUI()
         setupLayout()
+        print(professional)
+        print(casual)
 
         // Do any additional setup after loading the view.
     }
