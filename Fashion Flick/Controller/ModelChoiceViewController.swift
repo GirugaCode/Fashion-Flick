@@ -10,8 +10,7 @@ import UIKit
 
 class ModelChoiceViewController: UIViewController {
     
-    var professional: String = ""
-    var casual: String = ""
+    var style: String = ""
     
     let maleModelChoice: UIButton = {
         let button = UIButton(type: .custom)
@@ -50,8 +49,8 @@ class ModelChoiceViewController: UIViewController {
         
         navigationUI()
         setupLayout()
-        print(professional)
-        print(casual)
+        print(style)
+        
 
         // Do any additional setup after loading the view.
     }

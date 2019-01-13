@@ -1,0 +1,10 @@
+{
+  "professional":{
+    "male":{
+      "headwear":["Bandana", "Gucci Hat", "Bally Hat"],
+      "bodywear":"White Button-Up",
+      "bottomwear":"Grey Slacks",
+      "footwear":"Brown Dress Shoes"
+    }
+  }
+}

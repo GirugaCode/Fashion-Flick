@@ -23,6 +23,11 @@ struct clothingItem {
     var name: String
     var gender: Gender
     var style: Style
+    
+    
+//    func convertToData() -> [String:String] {
+//        var toString: String = ""
+//    }
 }
 
 

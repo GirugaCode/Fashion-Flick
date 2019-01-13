@@ -1,0 +1,6 @@
+framework module Pods_Fashion_Flick {
+  umbrella header "Pods-Fashion Flick-umbrella.h"
+
+  export *
+  module * { export * }
+}

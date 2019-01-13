@@ -53,13 +53,13 @@ class StyleChoiceViewController: UIViewController {
     
     @objc private func pushToProfessionalChoice(sender: UIButton) {
         let modelViewController = ModelChoiceViewController()
-        modelViewController.professional = "Professional"
+        modelViewController.style = "Professional"
         self.navigationController?.pushViewController(modelViewController, animated: true)
     }
     
     @objc private func pushToCasualChoice(sender: UIButton) {
         let modelViewController = ModelChoiceViewController()
-        modelViewController.professional = "Casual"
+        modelViewController.style = "Casual"
         self.navigationController?.pushViewController(modelViewController, animated: true)
     }
     

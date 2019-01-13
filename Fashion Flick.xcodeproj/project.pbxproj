@@ -40,6 +40,9 @@
 		289231B021E72F76008552A3 /* SwipingController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231AF21E72F76008552A3 /* SwipingController+extension.swift */; };
 		289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */; };
 		289231B821E7438D008552A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231B721E7438D008552A3 /* HomeViewController.swift */; };
+		28AE6FCF21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 28AE6FCE21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON */; };
+		28AE6FD121EAF91600ADB65D /* Constraints+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE6FD021EAF91600ADB65D /* Constraints+Extension.swift */; };
+		DF58B1576E83F388B604740E /* Pods_Fashion_Flick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38095094AEE3CFEED570EF94 /* Pods_Fashion_Flick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,11 @@
 		289231AF21E72F76008552A3 /* SwipingController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+extension.swift"; sourceTree = "<group>"; };
 		289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 		289231B721E7438D008552A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		28AE6FCE21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fashion-Flick-Database.JSON"; sourceTree = "<group>"; };
+		28AE6FD021EAF91600ADB65D /* Constraints+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+Extension.swift"; sourceTree = "<group>"; };
+		366D598FE06E2A5A760C8E86 /* Pods-Fashion Flick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion Flick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fashion Flick/Pods-Fashion Flick.release.xcconfig"; sourceTree = "<group>"; };
+		38095094AEE3CFEED570EF94 /* Pods_Fashion_Flick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashion_Flick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B4AD66AD5BF7341FAAC326A /* Pods-Fashion Flick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion Flick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fashion Flick/Pods-Fashion Flick.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF58B1576E83F388B604740E /* Pods_Fashion_Flick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +105,8 @@
 			children = (
 				2892316F21E5A521008552A3 /* Fashion Flick */,
 				2892316E21E5A521008552A3 /* Products */,
+				AB2A6C0E4D7BC6793D55DBDC /* Pods */,
+				31D869DA5C4E54F05B058C61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +121,7 @@
 		2892316F21E5A521008552A3 /* Fashion Flick */ = {
 			isa = PBXGroup;
 			children = (
+				28AE6FCD21EAEDDB00ADB65D /* JSON */,
 				289231B621E730F1008552A3 /* Extensions */,
 				289231B521E73090008552A3 /* Model */,
 				289231B421E7308D008552A3 /* View */,
@@ -184,8 +196,34 @@
 			children = (
 				289231AF21E72F76008552A3 /* SwipingController+extension.swift */,
 				289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */,
+				28AE6FD021EAF91600ADB65D /* Constraints+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		28AE6FCD21EAEDDB00ADB65D /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				28AE6FCE21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		31D869DA5C4E54F05B058C61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38095094AEE3CFEED570EF94 /* Pods_Fashion_Flick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB2A6C0E4D7BC6793D55DBDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B4AD66AD5BF7341FAAC326A /* Pods-Fashion Flick.debug.xcconfig */,
+				366D598FE06E2A5A760C8E86 /* Pods-Fashion Flick.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2892317F21E5A522008552A3 /* Build configuration list for PBXNativeTarget "Fashion Flick" */;
 			buildPhases = (
+				02FD0AFADB78535292F16C2A /* [CP] Check Pods Manifest.lock */,
 				2892316921E5A521008552A3 /* Sources */,
 				2892316A21E5A521008552A3 /* Frameworks */,
 				2892316B21E5A521008552A3 /* Resources */,
+				700BDE8B4EC11829D573425E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,6 +291,7 @@
 				289231A221E66CD0008552A3 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				2892319B21E66CD0008552A3 /* Montserrat-Black.ttf in Resources */,
 				289231A321E66CD0008552A3 /* Montserrat-Light.ttf in Resources */,
+				28AE6FCF21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON in Resources */,
 				289231A721E66CD0008552A3 /* Montserrat-ExtraBold.ttf in Resources */,
 				2892317B21E5A522008552A3 /* LaunchScreen.storyboard in Resources */,
 				2892319D21E66CD0008552A3 /* Montserrat-BlackItalic.ttf in Resources */,
@@ -272,6 +313,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02FD0AFADB78535292F16C2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fashion Flick-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		700BDE8B4EC11829D573425E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fashion Flick/Pods-Fashion Flick-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fashion Flick/Pods-Fashion Flick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2892316921E5A521008552A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,6 +374,7 @@
 				289231AE21E6E603008552A3 /* OnBoardingPage.swift in Sources */,
 				280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */,
 				280CEE2E21E94F780086911D /* ModelViewController.swift in Sources */,
+				28AE6FD121EAF91600ADB65D /* Constraints+Extension.swift in Sources */,
 				289231B821E7438D008552A3 /* HomeViewController.swift in Sources */,
 				289231B021E72F76008552A3 /* SwipingController+extension.swift in Sources */,
 				280CEE2C21E946090086911D /* ProfessionalClothes.swift in Sources */,
@@ -432,6 +521,7 @@
 		};
 		2892318021E5A522008552A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B4AD66AD5BF7341FAAC326A /* Pods-Fashion Flick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +540,7 @@
 		};
 		2892318121E5A522008552A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 366D598FE06E2A5A760C8E86 /* Pods-Fashion Flick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
