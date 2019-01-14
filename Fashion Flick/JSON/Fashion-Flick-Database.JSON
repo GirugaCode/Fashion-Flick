@@ -12,5 +12,19 @@
         "bottomwear":["Skinny Jeans", "Skirt", "Ankle Pants", "Straight Leg Pants", "Crop Pants"],
         "footwear":["Toe Pump Heels", "Loafers", "Flats", "Strap Sandal", "T-Strap Pump", "Pumps"]
     }
+  },
+  "casual":{
+      "male":{
+          "headwear":["Sun-Glasses", "Glasses", "Snapback Hat", "Baseball Cap", "NONE"],
+          "bodywear":["Flannel Button Up", "Hoodie", "Button-Down Shirts", "V-Neck Sweater", "Graphic Tee", "Jersey", "Polo Shirt", "Tank-Top", "Thermals", "Rain Jacket", "Weather-Proof Jacket", "Zip-Up Jacket"],
+          "bottomwear":["Denim Jeans", "Sweat Shorts", "Shorts", "Cargo Pants", "Sweatpants", "Trackpants", "Basketball Shorts", "Straight Pants", "Chino Pants"],
+          "footwear":["Running Shoes", "Sneakers", "Sandels", "Canvas Shoes", "Boots", "Hiking Boots", "Crocs"]
+      },
+      "female":{
+          "headwear":["Necklace", "Sun-Glasses", "Earrings", "Baseball Cap", "Snapback Hat", "NONE"],
+          "bodywear":["Sweatshirt", "Zip-Up Jacket", "Blouse", "Dress", "Button Down Blouse", "Cardigan", "Turtleneck", "Padded Parka", "Graphic T-Shirt", "V-Neck Sweater", "Long-sleeved Top", "Knit Dress", "Hoodie"],
+          "bottomwear":["Skinny Jeans", "Skirt", "Ankle Pants", "Joggers", "Yoga Pants", "Slim-fit Pants", "Denim Shorts", "Sweat Shorts", "Chino Shorts", "Paper-bag Shorts", "Skirt", "Wide-leg pants", "Wide-cut Jersey Pants"],
+          "footwear":["Toe Pump Heels", "Loafers", "Flats", "Sneakers", "Converse Shoes", "Crocs", "Slip-On Shoes"]
+    }
   }
 }

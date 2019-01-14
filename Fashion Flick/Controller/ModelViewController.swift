@@ -141,12 +141,6 @@ class ModelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationUI()
-
-        
-        print(male)
-        print(female)
-        print(styleChoice)
-        
         jsonParse()
     
     }
@@ -168,6 +162,7 @@ class ModelViewController: UIViewController {
         modelImageContainerView.addSubview(bodyWearLabel)
         modelImageContainerView.addSubview(bottomWearLabel)
         modelImageContainerView.addSubview(footWearLabel)
+        view.addSubview(generateNewOutfit)
         
         NSLayoutConstraint.activate([
             modelImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
@@ -199,8 +194,12 @@ class ModelViewController: UIViewController {
             
             footWearLabel.centerXAnchor.constraint(equalTo: footWearTextView.centerXAnchor),
             footWearLabel.centerYAnchor.constraint(equalTo: footWearTextView.centerYAnchor),
-            footWearLabel.heightAnchor.constraint(equalTo: footWearTextView.heightAnchor, multiplier: 0.5)
+            footWearLabel.heightAnchor.constraint(equalTo: footWearTextView.heightAnchor, multiplier: 0.5),
 
+            generateNewOutfit.topAnchor.constraint(equalTo: modelImageContainerView.bottomAnchor, constant: 100),
+            generateNewOutfit.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
+            generateNewOutfit.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
+            generateNewOutfit.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -45)
             ])
     }
     
@@ -267,24 +266,61 @@ class ModelViewController: UIViewController {
         
         let clothingData = try! JSON(data: jsonData)
         
-        // Gets the array value of the headwear
-        let headWearCount = clothingData["professional"]["male"]["headwear"].arrayValue
-        let bodyWearCount = clothingData["professional"]["male"]["bodywear"].arrayValue
-        let bottomWearCount = clothingData["professional"]["male"]["bottomwear"].arrayValue
-        let footWearCount = clothingData["professional"]["male"]["footwear"].arrayValue
+        // Gets the array value of the Professional Male Outfit
+        let pmHead = clothingData["professional"]["male"]["headwear"].arrayValue
+        let pmBody = clothingData["professional"]["male"]["bodywear"].arrayValue
+        let pmBottom = clothingData["professional"]["male"]["bottomwear"].arrayValue
+        let pmFoot = clothingData["professional"]["male"]["footwear"].arrayValue
+    
+   
+        // Gets a random piece of clothing and converts it into a string
+        let pmHeadWear = clothingData["professional"]["male"]["headwear"][Int.random(in: 0...pmHead.count - 1)].stringValue
+        let pmBodyWear = clothingData["professional"]["male"]["bodywear"][Int.random(in: 0...pmBody.count - 1)].stringValue
+        let pmBottomWear = clothingData["professional"]["male"]["bottomwear"][Int.random(in: 0...pmBottom.count - 1)].stringValue
+        let pmFootWear = clothingData["professional"]["male"]["footwear"][Int.random(in: 0...pmFoot.count - 1)].stringValue
         
-        // Gets a random piece of head wear and converts it into a string
-        let headWear = clothingData["professional"]["male"]["headwear"][Int.random(in: 0...headWearCount.count - 1)].stringValue
-        let bodyWear = clothingData["professional"]["male"]["bodywear"][Int.random(in: 0...bodyWearCount.count - 1)].stringValue
-        let bottomWear = clothingData["professional"]["male"]["bottomwear"][Int.random(in: 0...bottomWearCount.count - 1)].stringValue
-        let footWear = clothingData["professional"]["male"]["footwear"][Int.random(in: 0...footWearCount.count - 1)].stringValue
+        // Gets the array value of the Casual Male Outfit
+        let cmHead = clothingData["casual"]["male"]["headwear"].arrayValue
+        let cmBody = clothingData["casual"]["male"]["bodywear"].arrayValue
+        let cmBottom = clothingData["casual"]["male"]["bottomwear"].arrayValue
+        let cmFoot = clothingData["casual"]["male"]["footwear"].arrayValue
         
+        let cmHeadWear = clothingData["casual"]["male"]["headwear"][Int.random(in: 0...cmHead.count - 1)].stringValue
+        let cmBodyWear = clothingData["casual"]["male"]["bodywear"][Int.random(in: 0...cmBody.count - 1)].stringValue
+        let cmBottomWear = clothingData["casual"]["male"]["bottomwear"][Int.random(in: 0...cmBottom.count - 1)].stringValue
+        let cmFootWear = clothingData["casual"]["male"]["footwear"][Int.random(in: 0...cmFoot.count - 1)].stringValue
+        
+        
+        // Gets the array value of the Professional Female Outfit
+        let pfHead = clothingData["professional"]["female"]["headwear"].arrayValue
+        let pfBody = clothingData["professional"]["female"]["bodywear"].arrayValue
+        let pfBottom = clothingData["professional"]["female"]["bottomwear"].arrayValue
+        let pfFoot = clothingData["professional"]["female"]["footwear"].arrayValue
+        
+        let pfHeadWear = clothingData["professional"]["female"]["headwear"][Int.random(in: 0...pfHead.count - 1)].stringValue
+        let pfBodyWear = clothingData["professional"]["female"]["bodywear"][Int.random(in: 0...pfBody.count - 1)].stringValue
+        let pfBottomWear = clothingData["professional"]["female"]["bottomwear"][Int.random(in: 0...pfBottom.count - 1)].stringValue
+        let pfFootWear = clothingData["professional"]["female"]["footwear"][Int.random(in: 0...pfFoot.count - 1)].stringValue
+        
+        // Gets the array value of the Casual Female Outfit
+        let cfHead = clothingData["casual"]["female"]["headwear"].arrayValue
+        let cfBody = clothingData["casual"]["female"]["bodywear"].arrayValue
+        let cfBottom = clothingData["casual"]["female"]["bottomwear"].arrayValue
+        let cfFoot = clothingData["casual"]["female"]["footwear"].arrayValue
+        
+        let cfHeadWear = clothingData["casual"]["female"]["headwear"][Int.random(in: 0...cfHead.count - 1)].stringValue
+        let cfBodyWear = clothingData["casual"]["female"]["bodywear"][Int.random(in: 0...cfBody.count - 1)].stringValue
+        let cfBottomWear = clothingData["casual"]["female"]["bottomwear"][Int.random(in: 0...cfBottom.count - 1)].stringValue
+        let cfFootWear = clothingData["casual"]["female"]["footwear"][Int.random(in: 0...cfFoot.count - 1)].stringValue
+        
+        
+        
+    
 //        // Conditional for headwear to put an image in
 //        if headWear == "Bandana" {
 //            hat.image = UIImage(imageLiteralResourceName: "NightSky")
 //        }
         
-        print(headWear)
         print("worked!")
         
         
@@ -292,22 +328,34 @@ class ModelViewController: UIViewController {
         
         if male == "Male" && styleChoice == "Professional" {
             setupMaleLayout()
-            headWearLabel.text = headWear
-            bodyWearLabel.text = bodyWear
-            bottomWearLabel.text = bottomWear
-            footWearLabel.text = footWear
+            headWearLabel.text = pmHeadWear
+            bodyWearLabel.text = pmBodyWear
+            bottomWearLabel.text = pmBottomWear
+            footWearLabel.text = pmFootWear
         }
         
         if male == "Male" && styleChoice == "Casual" {
             setupMaleLayout()
+            headWearLabel.text = cmHeadWear
+            bodyWearLabel.text = cmBodyWear
+            bottomWearLabel.text = cmBottomWear
+            footWearLabel.text = cmFootWear
         }
         
         if female == "Female" && styleChoice == "Professional" {
             setupFemaleLayout()
+            headWearLabel.text = pfHeadWear
+            bodyWearLabel.text = pfBodyWear
+            bottomWearLabel.text = pfBottomWear
+            footWearLabel.text = pfFootWear
         }
         
         if female == "Female" && styleChoice == "Casual" {
             setupFemaleLayout()
+            headWearLabel.text = cfHeadWear
+            bodyWearLabel.text = cfBodyWear
+            bottomWearLabel.text = cfBottomWear
+            footWearLabel.text = cfFootWear
         }
         
     }
