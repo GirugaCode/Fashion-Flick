@@ -31,12 +31,14 @@ class ModelChoiceViewController: UIViewController {
     @objc func moveToMaleModel() {
         let modelViewController = ModelViewController()
         modelViewController.male = "Male"
+        modelViewController.styleChoice = style
         self.navigationController?.pushViewController(modelViewController, animated: true)
     }
     
     @objc func moveToFemaleModel() {
         let modelViewController = ModelViewController()
         modelViewController.female = "Female"
+        modelViewController.styleChoice = style
         self.navigationController?.pushViewController(modelViewController, animated: true)
     }
 
@@ -74,7 +76,7 @@ class ModelChoiceViewController: UIViewController {
         bottomImageContainerView.addSubview(femaleModelChoice)
         
         NSLayoutConstraint.activate([
-            topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 55),
             topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),

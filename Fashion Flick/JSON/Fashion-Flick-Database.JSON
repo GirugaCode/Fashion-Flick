@@ -1,10 +1,16 @@
 {
   "professional":{
     "male":{
-      "headwear":["Bandana", "Gucci Hat", "Bally Hat"],
-      "bodywear":"White Button-Up",
-      "bottomwear":"Grey Slacks",
-      "footwear":"Brown Dress Shoes"
+        "headwear":["Sun-Glasses", "Glasses", "Top Hat", "Fedora", "NONE"],
+        "bodywear":["White Button-Up", "Turtle Neck", "Trench Coat", "V-Neck Sweater", "Suit and Tie", "Tuxedo"],
+        "bottomwear":["Grey Slacks", "Blue Slacks", "Brown Belt"],
+        "footwear":["Brown Dress Shoes", "Loafers", "Oxfords", "Leather Sneakers"]
+    },
+    "female":{
+        "headwear":["Necklace", "Pendant", "Earrings", "NONE"],
+        "bodywear":["Blazer", "Suit", "Blouse", "Tuxedo Bib Tie", "Button Down Blouse", "Cowl Neck Longsleeve", "Turtleneck"],
+        "bottomwear":["Skinny Jeans", "Skirt", "Ankle Pants", "Straight Leg Pants", "Crop Pants"],
+        "footwear":["Toe Pump Heels", "Loafers", "Flats", "Strap Sandal", "T-Strap Pump", "Pumps"]
     }
   }
 }

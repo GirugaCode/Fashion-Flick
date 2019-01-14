@@ -11,6 +11,10 @@ import SwiftyJSON
 
 class ModelViewController: UIViewController {
     
+    var male: String = ""
+    var female: String = ""
+    var styleChoice: String = ""
+    
     private let maleModel: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "MaleModel"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -115,28 +119,19 @@ class ModelViewController: UIViewController {
         return label
     }()
     
-    var male: String = ""
-    var female: String = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationUI()
-        
-        if male == "Male" {
-            setupMaleLayout()
-        }
-        
-        if female == "Female" {
-            setupFemaleLayout()
-        }
+
         
         print(male)
         print(female)
+        print(styleChoice)
         
         jsonParse()
     
-
-
     }
 
     private func navigationUI() {
@@ -251,9 +246,15 @@ class ModelViewController: UIViewController {
         
         // Gets the array value of the headwear
         let headWearCount = clothingData["professional"]["male"]["headwear"].arrayValue
+        let bodyWearCount = clothingData["professional"]["male"]["bodywear"].arrayValue
+        let bottomWearCount = clothingData["professional"]["male"]["bottomwear"].arrayValue
+        let footWearCount = clothingData["professional"]["male"]["footwear"].arrayValue
         
         // Gets a random piece of head wear and converts it into a string
         let headWear = clothingData["professional"]["male"]["headwear"][Int.random(in: 0...headWearCount.count - 1)].stringValue
+        let bodyWear = clothingData["professional"]["male"]["bodywear"][Int.random(in: 0...bodyWearCount.count - 1)].stringValue
+        let bottomWear = clothingData["professional"]["male"]["bottomwear"][Int.random(in: 0...bottomWearCount.count - 1)].stringValue
+        let footWear = clothingData["professional"]["male"]["footwear"][Int.random(in: 0...footWearCount.count - 1)].stringValue
         
 //        // Conditional for headwear to put an image in
 //        if headWear == "Bandana" {
@@ -262,6 +263,29 @@ class ModelViewController: UIViewController {
         
         print(headWear)
         print("worked!")
+        
+        
+        
+        
+        if male == "Male" && styleChoice == "Professional" {
+            setupMaleLayout()
+            headWearLabel.text = headWear
+            bodyWearLabel.text = bodyWear
+            bottomWearLabel.text = bottomWear
+            footWearLabel.text = footWear
+        }
+        
+        if male == "Male" && styleChoice == "Casual" {
+            setupMaleLayout()
+        }
+        
+        if female == "Female" && styleChoice == "Professional" {
+            setupFemaleLayout()
+        }
+        
+        if female == "Female" && styleChoice == "Casual" {
+            setupFemaleLayout()
+        }
         
     }
 
