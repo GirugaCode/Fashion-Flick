@@ -29,6 +29,19 @@ class ModelViewController: UIViewController {
         return imageView
     }()
     
+    private let generateNewOutfit: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Generate New Outfit", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Montserrat-Regular", size: 24)
+        button.layer.cornerRadius = 10
+        button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.6431372549, green: 0.5490196078, blue: 0.4352941176, alpha: 1)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(pushToGenerateNewOutfit), for: .touchUpInside)
+        return button
+    }()
+    
+    
     private lazy var clothingStackView: UIStackView = {
         let clothingStackView = UIStackView(arrangedSubviews: [headWearTextView, bodyWearTextView, bottomWearTextView, footWearTextView])
         clothingStackView.alignment = .fill
@@ -119,6 +132,10 @@ class ModelViewController: UIViewController {
         return label
     }()
     
+    @objc private func pushToGenerateNewOutfit(sender: UIButton) {
+        jsonParse()
+    }
+    
 
     
     override func viewDidLoad() {
@@ -197,6 +214,7 @@ class ModelViewController: UIViewController {
         modelImageContainerView.addSubview(bodyWearLabel)
         modelImageContainerView.addSubview(bottomWearLabel)
         modelImageContainerView.addSubview(footWearLabel)
+        view.addSubview(generateNewOutfit)
         
         NSLayoutConstraint.activate([
             modelImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
@@ -228,7 +246,12 @@ class ModelViewController: UIViewController {
             
             footWearLabel.centerXAnchor.constraint(equalTo: footWearTextView.centerXAnchor),
             footWearLabel.centerYAnchor.constraint(equalTo: footWearTextView.centerYAnchor),
-            footWearLabel.heightAnchor.constraint(equalTo: footWearTextView.heightAnchor, multiplier: 0.5)
+            footWearLabel.heightAnchor.constraint(equalTo: footWearTextView.heightAnchor, multiplier: 0.5),
+            
+            generateNewOutfit.topAnchor.constraint(equalTo: modelImageContainerView.bottomAnchor, constant: 100),
+            generateNewOutfit.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
+            generateNewOutfit.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
+            generateNewOutfit.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -45)
             
             ])
     }
