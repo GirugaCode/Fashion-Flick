@@ -74,23 +74,23 @@ class ModelChoiceViewController: UIViewController {
         bottomImageContainerView.addSubview(femaleModelChoice)
         
         NSLayoutConstraint.activate([
-            topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
             topImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             topImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             
-            bottomImageContainerView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor, constant: 20),
+            bottomImageContainerView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor, constant: -50),
             bottomImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bottomImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bottomImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             
             maleModelChoice.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor),
             maleModelChoice.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor),
-            maleModelChoice.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.8),
+            maleModelChoice.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 1),
             
             femaleModelChoice.centerXAnchor.constraint(equalTo: bottomImageContainerView.centerXAnchor),
             femaleModelChoice.centerYAnchor.constraint(equalTo: bottomImageContainerView.centerYAnchor),
-            femaleModelChoice.heightAnchor.constraint(equalTo: bottomImageContainerView.heightAnchor, multiplier: 0.8)
+            femaleModelChoice.heightAnchor.constraint(equalTo: bottomImageContainerView.heightAnchor, multiplier: 1)
             
             ])
     }
