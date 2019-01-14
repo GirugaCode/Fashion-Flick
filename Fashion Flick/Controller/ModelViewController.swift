@@ -25,6 +25,98 @@ class ModelViewController: UIViewController {
         return imageView
     }()
     
+    private lazy var clothingStackView: UIStackView = {
+        let clothingStackView = UIStackView(arrangedSubviews: [headWearTextView, bodyWearTextView, bottomWearTextView, footWearTextView])
+        clothingStackView.alignment = .fill
+        clothingStackView.distribution = .fillEqually
+        clothingStackView.axis = .vertical
+        clothingStackView.spacing = 50
+        clothingStackView.translatesAutoresizingMaskIntoConstraints = false
+        return clothingStackView
+    }()
+    
+    private let headWearTextView: UIView = {
+        let textView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.backgroundColor = #colorLiteral(red: 0.6745098039, green: 0.6784313725, blue: 0.6509803922, alpha: 1)
+        textView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        textView.layer.cornerRadius = 10
+        textView.layer.borderWidth = 0.5
+        return textView
+    }()
+    
+    private let bodyWearTextView: UIView = {
+        let textView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.backgroundColor = #colorLiteral(red: 0.6745098039, green: 0.6784313725, blue: 0.6509803922, alpha: 1)
+        textView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        textView.layer.cornerRadius = 10
+        textView.layer.borderWidth = 0.5
+        return textView
+    }()
+    
+    private let bottomWearTextView: UIView = {
+        let textView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.backgroundColor = #colorLiteral(red: 0.6745098039, green: 0.6784313725, blue: 0.6509803922, alpha: 1)
+        textView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        textView.layer.cornerRadius = 10
+        textView.layer.borderWidth = 0.5
+        return textView
+    }()
+    
+    private let footWearTextView: UIView = {
+        let textView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.backgroundColor = #colorLiteral(red: 0.6745098039, green: 0.6784313725, blue: 0.6509803922, alpha: 1)
+        textView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        textView.layer.cornerRadius = 10
+        textView.layer.borderWidth = 0.5
+        return textView
+    }()
+    
+    private let headWearLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = "Hat"
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.font = UIFont(name: "Monterrat-Regular", size: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let bodyWearLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = "Shirt"
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.font = UIFont(name: "Monterrat-Regular", size: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let bottomWearLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = "Pants"
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.font = UIFont(name: "Monterrat-Regular", size: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let footWearLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.text = "Crocs"
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.font = UIFont(name: "Monterrat-Regular", size: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    
+    
     
     var male: String = ""
     var female: String = ""
@@ -45,7 +137,7 @@ class ModelViewController: UIViewController {
         print(female)
         
         jsonParse()
-
+    
 
 
     }
@@ -57,23 +149,30 @@ class ModelViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Thin", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
+    
     private func setupFemaleLayout(){
         let modelImageContainerView = UIView()
         view.addSubview(modelImageContainerView)
         modelImageContainerView.translatesAutoresizingMaskIntoConstraints = false
         modelImageContainerView.addSubview(femaleModel)
+        modelImageContainerView.addSubview(clothingStackView)
         
         NSLayoutConstraint.activate([
-            modelImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            modelImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             modelImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             modelImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            modelImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.65),
+            modelImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.55),
             
             femaleModel.topAnchor.constraint(equalTo: modelImageContainerView.topAnchor),
-            femaleModel.leadingAnchor.constraint(equalTo: modelImageContainerView.leadingAnchor, constant: 25),
-            femaleModel.trailingAnchor.constraint(equalTo: modelImageContainerView.trailingAnchor, constant: -25),
-            femaleModel.heightAnchor.constraint(equalTo: modelImageContainerView.heightAnchor, multiplier: 1)
+            femaleModel.leadingAnchor.constraint(equalTo: modelImageContainerView.leadingAnchor),
+            femaleModel.trailingAnchor.constraint(equalTo: modelImageContainerView.trailingAnchor, constant: -150),
+            femaleModel.heightAnchor.constraint(equalTo: modelImageContainerView.heightAnchor, multiplier: 1),
             
+            clothingStackView.topAnchor.constraint(equalTo: modelImageContainerView.topAnchor, constant: 20),
+            clothingStackView.leadingAnchor.constraint(equalTo: modelImageContainerView.leadingAnchor, constant: 210),
+            clothingStackView.trailingAnchor.constraint(equalTo: modelImageContainerView.trailingAnchor, constant: -5),
+            clothingStackView.heightAnchor.constraint(equalTo: modelImageContainerView.heightAnchor, multiplier: 0.9)
+
             ])
     }
     
@@ -82,17 +181,23 @@ class ModelViewController: UIViewController {
         view.addSubview(modelImageContainerView)
         modelImageContainerView.translatesAutoresizingMaskIntoConstraints = false
         modelImageContainerView.addSubview(maleModel)
+        modelImageContainerView.addSubview(clothingStackView)
         
         NSLayoutConstraint.activate([
-            modelImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            modelImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             modelImageContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             modelImageContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            modelImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.65),
+            modelImageContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.55),
             
             maleModel.topAnchor.constraint(equalTo: modelImageContainerView.topAnchor),
-            maleModel.leadingAnchor.constraint(equalTo: modelImageContainerView.leadingAnchor, constant: 25),
-            maleModel.trailingAnchor.constraint(equalTo: modelImageContainerView.trailingAnchor, constant: -25),
-            maleModel.heightAnchor.constraint(equalTo: modelImageContainerView.heightAnchor, multiplier: 1)
+            maleModel.leadingAnchor.constraint(equalTo: modelImageContainerView.leadingAnchor),
+            maleModel.trailingAnchor.constraint(equalTo: modelImageContainerView.trailingAnchor, constant: -150),
+            maleModel.heightAnchor.constraint(equalTo: modelImageContainerView.heightAnchor, multiplier: 1),
+            
+            clothingStackView.topAnchor.constraint(equalTo: modelImageContainerView.topAnchor, constant: 10),
+            clothingStackView.leadingAnchor.constraint(equalTo: modelImageContainerView.leadingAnchor, constant: 210),
+            clothingStackView.trailingAnchor.constraint(equalTo: modelImageContainerView.trailingAnchor, constant: -5),
+            clothingStackView.heightAnchor.constraint(equalTo: modelImageContainerView.heightAnchor, multiplier: 0.9)
             
             ])
     }
