@@ -1,5 +1,5 @@
 //
-//  Double+String+Extension.swift
+//  ForecastService.swift
 //  Fashion Flick
 //
 //  Created by Ryan Nguyen on 1/15/19.
