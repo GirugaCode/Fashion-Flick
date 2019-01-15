@@ -321,7 +321,6 @@ class ModelViewController: UIViewController {
 //            hat.image = UIImage(imageLiteralResourceName: "NightSky")
 //        }
         
-        print("worked!")
         
         
         

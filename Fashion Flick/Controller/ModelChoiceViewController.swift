@@ -58,7 +58,6 @@ class ModelChoiceViewController: UIViewController {
         
         navigationUI()
         setupLayout()
-        print(style)
         
 
         // Do any additional setup after loading the view.
