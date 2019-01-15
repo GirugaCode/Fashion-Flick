@@ -100,11 +100,13 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     private func setupLayout() {
         let topImageContainerView = UIView()
-        let infoContainerView = UIView()
         view.addSubview(topImageContainerView)
+        topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let infoContainerView = UIView()
         view.addSubview(infoContainerView)
         infoContainerView.translatesAutoresizingMaskIntoConstraints = false
-        topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
+        
         topImageContainerView.addSubview(weatherImageView)
         view.addSubview(dressMeUpButton)
         view.addSubview(temperatureLabel)

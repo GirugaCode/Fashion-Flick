@@ -28,6 +28,13 @@ class ModelChoiceViewController: UIViewController {
         return button
     } ()
     
+    private let seperatorImage: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "SelectionSeperator"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     @objc func moveToMaleModel() {
         let modelViewController = ModelViewController()
         modelViewController.male = "Male"
@@ -67,13 +74,17 @@ class ModelChoiceViewController: UIViewController {
     private func setupLayout() {
         let topImageContainerView = UIView()
         view.addSubview(topImageContainerView)
+//        topImageContainerView.backgroundColor = .red
         topImageContainerView.translatesAutoresizingMaskIntoConstraints = false
         topImageContainerView.addSubview(maleModelChoice)
         
         let bottomImageContainerView = UIView()
         view.addSubview(bottomImageContainerView)
+//        bottomImageContainerView.backgroundColor = .blue
         bottomImageContainerView.translatesAutoresizingMaskIntoConstraints = false
         bottomImageContainerView.addSubview(femaleModelChoice)
+        
+        view.addSubview(seperatorImage)
         
         NSLayoutConstraint.activate([
             topImageContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 55),
@@ -89,6 +100,11 @@ class ModelChoiceViewController: UIViewController {
             maleModelChoice.centerXAnchor.constraint(equalTo: topImageContainerView.centerXAnchor),
             maleModelChoice.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor),
             maleModelChoice.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 1),
+            
+            seperatorImage.topAnchor.constraint(equalTo: bottomImageContainerView.topAnchor),
+            seperatorImage.leadingAnchor.constraint(equalTo: bottomImageContainerView.leadingAnchor),
+            seperatorImage.trailingAnchor.constraint(equalTo: bottomImageContainerView.trailingAnchor),
+            seperatorImage.heightAnchor.constraint(equalTo: bottomImageContainerView.heightAnchor, multiplier: 0.1),
             
             femaleModelChoice.centerXAnchor.constraint(equalTo: bottomImageContainerView.centerXAnchor),
             femaleModelChoice.centerYAnchor.constraint(equalTo: bottomImageContainerView.centerYAnchor),
