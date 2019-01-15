@@ -75,7 +75,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         super.viewDidLoad()
-
+        
         
         setupLayout()
         navigationUI()
@@ -88,7 +88,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         
         // Checks if user already did on-boarding
         UserDefaults.standard.set(true, forKey: "current_user")
-
+        
     }
     
     private func navigationUI() {

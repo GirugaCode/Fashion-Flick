@@ -1,5 +1,5 @@
 //
-//  Double+String+Extension.swift
+//  Double+String+Extensions.swift
 //  Fashion Flick
 //
 //  Created by Ryan Nguyen on 1/15/19.

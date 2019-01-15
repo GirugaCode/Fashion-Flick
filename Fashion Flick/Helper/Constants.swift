@@ -1,5 +1,5 @@
 //
-//  WeatherAPI.swift
+//  Constants.swift
 //  Fashion Flick
 //
 //  Created by Ryan Nguyen on 1/15/19.

@@ -7,6 +7,5 @@ target 'Fashion Flick' do
 
   # Pods for Fashion Flick
 	pod 'SwiftyJSON', '~> 4.0'
-	pod 'Alamofire'
 
 end

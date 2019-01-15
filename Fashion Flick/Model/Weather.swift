@@ -1,8 +1,8 @@
 //
-//  CurrentWeather.swift
+//  Weather.swift
 //  Fashion Flick
 //
-//  Created by Ryan Nguyen on 1/14/19.
+//  Created by Ryan Nguyen on 1/15/19.
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
@@ -28,6 +28,4 @@ struct Weather: Decodable{
         summary = try? weatherValues.decode(String.self, forKey: .summary)
     }
 }
-    
-
 
