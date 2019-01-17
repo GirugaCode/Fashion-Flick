@@ -9,6 +9,6 @@
 import Foundation
 
 public struct Constants{
-    static let apiKey: String = "*********"
+    static let apiKey: String = "*****"
     static let baseURL: URL = URL(string: "https://api.darksky.net/forecast/")!
 }
