@@ -87,7 +87,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         // Checks if user already did on-boarding
-//        UserDefaults.standard.set(true, forKey: "current_user")
+        UserDefaults.standard.set(true, forKey: "current_user")
         
     }
     
