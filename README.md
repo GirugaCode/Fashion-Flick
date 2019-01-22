@@ -1,4 +1,5 @@
-<img src="img/README-Icon" width="350" title="hover text">
+<img src= "img/README-Icon" width = 150 height = 150></img>
+
 
 
 # Fashion Flick
