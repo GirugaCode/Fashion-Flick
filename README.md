@@ -1,4 +1,4 @@
-<img src= "Fashion\ Flick/Assets.xcassets/AppIcon.appiconset/ItunesArtwork@2x.png width = 250 height = 250></img>
+<img src="img/README-Icon" width="350" title="hover text">
 
 
 # Fashion Flick
