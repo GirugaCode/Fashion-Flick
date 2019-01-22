@@ -1,3 +1,6 @@
+<img src= "Fashion Flick/Assets.xcassets/ItunesArtwork@2x.png width = 250 height = 250></img>
+
+
 # Fashion Flick
 
 Fashion Flick is here to help you decide what to dress for the day!  With Fashion Flick you can find inspiration for any style occassion. Fill out your preferences and BOOM! You got yourself an outfit. Download <a href="bit.ly/Fashion-Flick">here</a> 
@@ -12,7 +15,7 @@ Fashion Flick is here to help you decide what to dress for the day!  With Fashio
 * [Dark Sky API](https://darksky.net/dev)
 
 
-## ToDO
+## To-Do
 
 - [x] Add User Onboarding
 - [x] Generate random outfits based on choices
