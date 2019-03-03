@@ -25,3 +25,5 @@ Fashion Flick is here to help you decide what to dress for the day!  With Fashio
 - [ ] Have a database of outfits from an API
 - [ ] Generate outfits depending on weather
 - [ ] Create a user community with FireBase
+- [ ] Create Settings to adjust user preferences
+- [ ] Add Push Notifications to remind people at the start of the day

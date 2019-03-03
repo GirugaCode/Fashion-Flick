@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     }()
     
     private let temperatureLabel: UILabel = {
-        let label = UILabel()
+        let label = UILabel().
         label.textAlignment = .center
         label.text = "--"
         label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
