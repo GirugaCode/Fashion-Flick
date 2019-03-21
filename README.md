@@ -1,5 +1,4 @@
-<img src= "img/Fashion-Flick-Icon" width = 150 height = 150></img>
-
+![Banner](/img/Fashion-Flick-Icon.png)
 
 
 # Fashion Flick
