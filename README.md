@@ -1,4 +1,4 @@
-<img src= "img/README-Icon" width = 150 height = 150></img>
+<img src= "img/Fashion-Flick-Icon" width = 150 height = 150></img>
 
 
 
