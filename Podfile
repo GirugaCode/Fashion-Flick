@@ -6,6 +6,6 @@ target 'Fashion Flick' do
   use_frameworks!
 
   # Pods for Fashion Flick
-	pod 'SwiftyJSON', '~> 4.0'
+	pod 'SwiftyJSON'
 
 end

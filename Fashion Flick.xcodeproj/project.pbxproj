@@ -44,6 +44,7 @@
 		289231B821E7438D008552A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289231B721E7438D008552A3 /* HomeViewController.swift */; };
 		28AE6FCF21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 28AE6FCE21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON */; };
 		28AE6FD121EAF91600ADB65D /* Constraints+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE6FD021EAF91600ADB65D /* Constraints+Extension.swift */; };
+		28D7F267228B7E560037818B /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7F266228B7E560037818B /* Array+extension.swift */; };
 		DF58B1576E83F388B604740E /* Pods_Fashion_Flick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38095094AEE3CFEED570EF94 /* Pods_Fashion_Flick.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		289231B721E7438D008552A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28AE6FCE21EAEE0E00ADB65D /* Fashion-Flick-Database.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Fashion-Flick-Database.JSON"; sourceTree = "<group>"; };
 		28AE6FD021EAF91600ADB65D /* Constraints+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+Extension.swift"; sourceTree = "<group>"; };
+		28D7F266228B7E560037818B /* Array+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+extension.swift"; sourceTree = "<group>"; };
 		366D598FE06E2A5A760C8E86 /* Pods-Fashion Flick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion Flick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fashion Flick/Pods-Fashion Flick.release.xcconfig"; sourceTree = "<group>"; };
 		38095094AEE3CFEED570EF94 /* Pods_Fashion_Flick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fashion_Flick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4AD66AD5BF7341FAAC326A /* Pods-Fashion Flick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fashion Flick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fashion Flick/Pods-Fashion Flick.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				289231B121E73030008552A3 /* SwipingController+UICollectionView.swift */,
 				28AE6FD021EAF91600ADB65D /* Constraints+Extension.swift */,
 				280E173321EE7F5300B25EE5 /* Double+String+Extensions.swift */,
+				28D7F266228B7E560037818B /* Array+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				TargetAttributes = {
 					2892316C21E5A521008552A3 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -394,6 +398,7 @@
 				280E173621EE7F8700B25EE5 /* Weather.swift in Sources */,
 				289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */,
 				289231AA21E6A491008552A3 /* OnBoardingViewController.swift in Sources */,
+				28D7F267228B7E560037818B /* Array+extension.swift in Sources */,
 				289231AE21E6E603008552A3 /* OnBoardingPage.swift in Sources */,
 				280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */,
 				280CEE2E21E94F780086911D /* ModelViewController.swift in Sources */,
@@ -559,7 +564,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ryan.Fashion-Flick";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -580,7 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ryan.Fashion-Flick";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -255,6 +255,12 @@ class ModelViewController: UIViewController {
             ])
     }
     
+    // function to get a random index of an array  
+    private func randomArrayIndex(array: Array<Any>) -> Int {
+        let randomIndex = Int.random(in: 0...array.count - 1)
+        return randomIndex
+    }
+    
     // function to parse the JSON file
     private func jsonParse() {
         guard let jsonURL = Bundle.main.url(forResource: "Fashion-Flick-Database" , withExtension: "JSON") else {
@@ -274,10 +280,10 @@ class ModelViewController: UIViewController {
     
    
         // Gets a random piece of clothing and converts it into a string
-        let pmHeadWear = clothingData["professional"]["male"]["headwear"][Int.random(in: 0...pmHead.count - 1)].stringValue
-        let pmBodyWear = clothingData["professional"]["male"]["bodywear"][Int.random(in: 0...pmBody.count - 1)].stringValue
-        let pmBottomWear = clothingData["professional"]["male"]["bottomwear"][Int.random(in: 0...pmBottom.count - 1)].stringValue
-        let pmFootWear = clothingData["professional"]["male"]["footwear"][Int.random(in: 0...pmFoot.count - 1)].stringValue
+        let pmHeadWear = clothingData["professional"]["male"]["headwear"][randomArrayIndex(array: pmHead)].stringValue
+        let pmBodyWear = clothingData["professional"]["male"]["bodywear"][randomArrayIndex(array: pmBody)].stringValue
+        let pmBottomWear = clothingData["professional"]["male"]["bottomwear"][randomArrayIndex(array: pmBottom)].stringValue
+        let pmFootWear = clothingData["professional"]["male"]["footwear"][randomArrayIndex(array: pmFoot)].stringValue
         
         // Gets the array value of the Casual Male Outfit
         let cmHead = clothingData["casual"]["male"]["headwear"].arrayValue
@@ -285,10 +291,10 @@ class ModelViewController: UIViewController {
         let cmBottom = clothingData["casual"]["male"]["bottomwear"].arrayValue
         let cmFoot = clothingData["casual"]["male"]["footwear"].arrayValue
         
-        let cmHeadWear = clothingData["casual"]["male"]["headwear"][Int.random(in: 0...cmHead.count - 1)].stringValue
-        let cmBodyWear = clothingData["casual"]["male"]["bodywear"][Int.random(in: 0...cmBody.count - 1)].stringValue
-        let cmBottomWear = clothingData["casual"]["male"]["bottomwear"][Int.random(in: 0...cmBottom.count - 1)].stringValue
-        let cmFootWear = clothingData["casual"]["male"]["footwear"][Int.random(in: 0...cmFoot.count - 1)].stringValue
+        let cmHeadWear = clothingData["casual"]["male"]["headwear"][randomArrayIndex(array: cmHead)].stringValue
+        let cmBodyWear = clothingData["casual"]["male"]["bodywear"][randomArrayIndex(array: cmBody)].stringValue
+        let cmBottomWear = clothingData["casual"]["male"]["bottomwear"][randomArrayIndex(array: cmBottom)].stringValue
+        let cmFootWear = clothingData["casual"]["male"]["footwear"][randomArrayIndex(array: cmFoot)].stringValue
         
         
         // Gets the array value of the Professional Female Outfit
@@ -297,10 +303,10 @@ class ModelViewController: UIViewController {
         let pfBottom = clothingData["professional"]["female"]["bottomwear"].arrayValue
         let pfFoot = clothingData["professional"]["female"]["footwear"].arrayValue
         
-        let pfHeadWear = clothingData["professional"]["female"]["headwear"][Int.random(in: 0...pfHead.count - 1)].stringValue
-        let pfBodyWear = clothingData["professional"]["female"]["bodywear"][Int.random(in: 0...pfBody.count - 1)].stringValue
-        let pfBottomWear = clothingData["professional"]["female"]["bottomwear"][Int.random(in: 0...pfBottom.count - 1)].stringValue
-        let pfFootWear = clothingData["professional"]["female"]["footwear"][Int.random(in: 0...pfFoot.count - 1)].stringValue
+        let pfHeadWear = clothingData["professional"]["female"]["headwear"][randomArrayIndex(array: pfHead)].stringValue
+        let pfBodyWear = clothingData["professional"]["female"]["bodywear"][randomArrayIndex(array: pfBody)].stringValue
+        let pfBottomWear = clothingData["professional"]["female"]["bottomwear"][randomArrayIndex(array: pfBottom)].stringValue
+        let pfFootWear = clothingData["professional"]["female"]["footwear"][randomArrayIndex(array: pfFoot)].stringValue
         
         // Gets the array value of the Casual Female Outfit
         let cfHead = clothingData["casual"]["female"]["headwear"].arrayValue
@@ -308,10 +314,10 @@ class ModelViewController: UIViewController {
         let cfBottom = clothingData["casual"]["female"]["bottomwear"].arrayValue
         let cfFoot = clothingData["casual"]["female"]["footwear"].arrayValue
         
-        let cfHeadWear = clothingData["casual"]["female"]["headwear"][Int.random(in: 0...cfHead.count - 1)].stringValue
-        let cfBodyWear = clothingData["casual"]["female"]["bodywear"][Int.random(in: 0...cfBody.count - 1)].stringValue
-        let cfBottomWear = clothingData["casual"]["female"]["bottomwear"][Int.random(in: 0...cfBottom.count - 1)].stringValue
-        let cfFootWear = clothingData["casual"]["female"]["footwear"][Int.random(in: 0...cfFoot.count - 1)].stringValue
+        let cfHeadWear = clothingData["casual"]["female"]["headwear"][randomArrayIndex(array: cfHead)].stringValue
+        let cfBodyWear = clothingData["casual"]["female"]["bodywear"][randomArrayIndex(array: cfBody)].stringValue
+        let cfBottomWear = clothingData["casual"]["female"]["bottomwear"][randomArrayIndex(array: cfBottom)].stringValue
+        let cfFootWear = clothingData["casual"]["female"]["footwear"][randomArrayIndex(array: cfFoot)].stringValue
         
         
         
