@@ -20,7 +20,7 @@ class SiriShortuts {
         
         activity.persistentIdentifier =
             NSUserActivityPersistentIdentifier(NewOutfitActivityType)
-        activity.title = "Get dressed for the day 💃"
+        activity.title = "Get dressed up! 💃"
         activity.suggestedInvocationPhrase = "Dress me up"
         activity.isEligibleForSearch = true
         activity.isEligibleForPrediction = true

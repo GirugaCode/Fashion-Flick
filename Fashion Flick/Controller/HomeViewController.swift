@@ -6,9 +6,11 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
-import UIKit
-import Foundation
 import CoreLocation
+import CoreSpotlight
+import Foundation
+import Intents
+import UIKit
 
 class HomeViewController: UIViewController, CLLocationManagerDelegate {
     

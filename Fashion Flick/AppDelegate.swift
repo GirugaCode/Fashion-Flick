@@ -6,12 +6,14 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+import IntentsUI
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigation: UINavigationController?
     
     class var shared: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -24,6 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // TODO: Implement notifications for users to open the app and start dressing
 
+        return true
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
+        ) -> Bool {
+        let styleViewController = StyleChoiceViewController()
+        navigation?.pushViewController(styleViewController, animated: false)
         return true
     }
     
@@ -57,9 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func showHome () {
         window = UIWindow(frame: UIScreen.main.bounds)
         let controller = HomeViewController()
-        let navigationController = UINavigationController(rootViewController: controller)
+        navigation = UINavigationController(rootViewController: controller)
         window?.makeKeyAndVisible()
-        window?.rootViewController = navigationController
+        window?.rootViewController = navigation
     }
 
 
