@@ -69,8 +69,6 @@ class StyleChoiceViewController: UIViewController {
         
         navigationUI()
         setupLayout()
-
-        // Do any additional setup after loading the view.
     }
     
     private func navigationUI() {
@@ -80,7 +78,6 @@ class StyleChoiceViewController: UIViewController {
         navigationItem.title = "Select Style Choice"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Light", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
-    
     
     private func setupLayout() {
         let topImageContainerView = UIView()

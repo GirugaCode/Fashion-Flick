@@ -14,6 +14,7 @@
 		280E173221EE7F3000B25EE5 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280E173121EE7F3000B25EE5 /* ForecastService.swift */; };
 		280E173421EE7F5300B25EE5 /* Double+String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280E173321EE7F5300B25EE5 /* Double+String+Extensions.swift */; };
 		280E173621EE7F8700B25EE5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280E173521EE7F8700B25EE5 /* Weather.swift */; };
+		288DC74C23260A5600EFD46B /* SiriShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288DC74B23260A5600EFD46B /* SiriShortcuts.swift */; };
 		2892317121E5A521008552A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2892317021E5A521008552A3 /* AppDelegate.swift */; };
 		2892317621E5A521008552A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2892317421E5A521008552A3 /* Main.storyboard */; };
 		2892317821E5A522008552A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2892317721E5A522008552A3 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		280E173121EE7F3000B25EE5 /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		280E173321EE7F5300B25EE5 /* Double+String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+String+Extensions.swift"; sourceTree = "<group>"; };
 		280E173521EE7F8700B25EE5 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		288DC74B23260A5600EFD46B /* SiriShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcuts.swift; sourceTree = "<group>"; };
 		2892316D21E5A521008552A3 /* Fashion Flick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fashion Flick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2892317021E5A521008552A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2892317521E5A521008552A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				28AE6FD021EAF91600ADB65D /* Constraints+Extension.swift */,
 				280E173321EE7F5300B25EE5 /* Double+String+Extensions.swift */,
 				28D7F266228B7E560037818B /* Array+extension.swift */,
+				288DC74B23260A5600EFD46B /* SiriShortcuts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				280E173621EE7F8700B25EE5 /* Weather.swift in Sources */,
 				289231B221E73030008552A3 /* SwipingController+UICollectionView.swift in Sources */,
 				289231AA21E6A491008552A3 /* OnBoardingViewController.swift in Sources */,
+				288DC74C23260A5600EFD46B /* SiriShortcuts.swift in Sources */,
 				28D7F267228B7E560037818B /* Array+extension.swift in Sources */,
 				289231AE21E6E603008552A3 /* OnBoardingPage.swift in Sources */,
 				280CEE2021E84F730086911D /* StyleChoiceViewController.swift in Sources */,
