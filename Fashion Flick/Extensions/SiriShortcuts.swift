@@ -26,7 +26,7 @@ class SiriShortuts {
         activity.isEligibleForPrediction = true
         activity.contentAttributeSet = attributes
 
-        attributes.contentDescription = "Show you're amazing outfit to the world 🌎"
+        attributes.contentDescription = "Show your amazing outfit to the world 🌎"
         attributes.thumbnailData = thumbnail?.jpegData(compressionQuality: 1.0)
         
         return activity

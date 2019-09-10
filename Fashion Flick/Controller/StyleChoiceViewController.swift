@@ -6,12 +6,13 @@
 //  Copyright © 2019 Danh Phu Nguyen. All rights reserved.
 //
 
+import IntentsUI
 import UIKit
 
 class StyleChoiceViewController: UIViewController {
     
     lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [professionalButton, casualButton])
+        let stackView = UIStackView(arrangedSubviews: [addSiriShortcutButton, professionalButton, casualButton])
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
@@ -25,6 +26,17 @@ class StyleChoiceViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
+    }()
+    
+    private let addSiriShortcutButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Add Siri Shortcut", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont(name: "Montserrat-Regular", size: 18)
+        button.layer.cornerRadius = 10
+        button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        button.addTarget(self, action: #selector(addGetDressedShortcut), for: .touchUpInside)
+        return button
     }()
     
     private let professionalButton: UIButton = {
@@ -63,6 +75,17 @@ class StyleChoiceViewController: UIViewController {
         self.navigationController?.pushViewController(modelViewController, animated: true)
     }
     
+    @objc private func addGetDressedShortcut(sender: UIButton) {
+        let activity = SiriShortuts.newOutfitShortcut(thumbnail: #imageLiteral(resourceName: "Fashion Flick Logo"))
+        let shortcut = INShortcut(userActivity: activity)
+        
+        let IntentVC = INUIAddVoiceShortcutViewController(shortcut: shortcut)
+        IntentVC.delegate = self
+        
+        present(IntentVC, animated: true, completion: nil)
+
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,14 +120,27 @@ class StyleChoiceViewController: UIViewController {
             clothingChoiceImage.centerYAnchor.constraint(equalTo: topImageContainerView.centerYAnchor),
             clothingChoiceImage.heightAnchor.constraint(equalTo: topImageContainerView.heightAnchor, multiplier: 0.7),
             
-            stackView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor, constant: 60),
+            stackView.topAnchor.constraint(equalTo: topImageContainerView.bottomAnchor, constant: 30),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
             stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
             
             ])
     }
-
-
-
 }
+
+extension StyleChoiceViewController: INUIAddVoiceShortcutViewControllerDelegate {
+    func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
+        dismiss(animated: true, completion: nil)
+
+    }
+    
+    func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
+
+
+
